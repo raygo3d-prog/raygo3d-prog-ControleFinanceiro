@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard - Controle Financeiro</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Chart.js CDN (needs internet when opening) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>Controle Financeiro - Raygo3D</h1>
+    <nav class="nav">
+      <a href="#">Dashboard</a>
+      <a href="#">Transações</a>
+      <a href="#">Vendas</a>
+      <a href="#">Relatórios</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="cards">
+      <div class="card">
+        <h3>Total Entradas</h3>
+        <p class="big" id="entradas">R$ 0,00</p>
+      </div>
+      <div class="card">
+        <h3>Total Saídas</h3>
+        <p class="big" id="saidas">R$ 0,00</p>
+      </div>
+      <div class="card">
+        <h3>Saldo Atual</h3>
+        <p class="big" id="saldo">R$ 0,00</p>
+      </div>
+      <div class="card">
+        <h3>Lucro (Vendas)</h3>
+        <p class="big" id="lucro">R$ 0,00</p>
+      </div>
+    </section>
+
+    <section class="visuals">
+      <div class="chart-card">
+        <h4>Entradas x Saídas (Mensal)</h4>
+        <canvas id="barChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <h4>Distribuição por Categoria</h4>
+        <canvas id="pieChart"></canvas>
+      </div>
+    </section>
+
+    <section class="images-row">
+      <div class="img-wrap"><h5>Tela 1 (app)</h5>
+        <img src="images/84a1e73c-12d9-477a-a1db-269d9b54b8ea.png" alt="tela1">
+      </div>
+      <div class="img-wrap"><h5>Tela 2 (app)</h5>
+        <img src="images/82ac51e6-ccc5-482f-a2db-583fd5207f51.png" alt="tela2">
+      </div>
+    </section>
+
+    <section class="transactions">
+      <h4>Transações (exemplo)</h4>
+      <table id="txTable">
+        <thead><tr><th>Data</th><th>Descrição</th><th>Categoria</th><th>Tipo</th><th>Valor</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
